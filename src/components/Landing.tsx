@@ -29,7 +29,7 @@ const Landing: React.FC<MainContentProps> = ({ image, title, description }) => {
               <p className="mt-6 leading-relaxed text-neutral-400 max-md:mt-4">
                 {description}
               </p>
-              <Button>Get to Know →</Button>
+              <Button>Find out More →</Button>
             </div>
           </div>
         </div>
