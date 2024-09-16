@@ -1,8 +1,28 @@
-import React from "react";
+'use client';
+
+import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Landing from "@/components/Landing";
+import Lenis from "lenis";
+import { Box } from "@chakra-ui/react";
 
 const LandingPage: React.FC = () => {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 2,
+      smoothWheel: true,
+      // infinite: true,
+      // syncTouch: true,
+      // touchInertiaMultiplier: 12,
+      // touchMultiplier: 0.5,
+    });
+    const raf = (time: any) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+    requestAnimationFrame(raf);
+  });
+  
   const menuItems = [
     "About",
     "Skills",
@@ -20,13 +40,13 @@ const LandingPage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center px-24 max-md:px-5 bg-gray-950">
+    <Box className="flex flex-col items-center px-24 max-md:px-5 bg-gray-950" >
       <Header
         logo="https://cdn.builder.io/api/v1/image/assets/TEMP/a580203fede5ad2470b2de709e88a492a7da55d9e9ea3a7f0cb978f1023c0b86?apiKey=42c352afd4764937ae53b030b073a4c4&&apiKey=42c352afd4764937ae53b030b073a4c4"
         menuItems={menuItems}
       />
       <Landing {...mainContentData} />
-    </div>
+    </Box>
   );
 };
 
