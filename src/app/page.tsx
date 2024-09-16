@@ -45,7 +45,7 @@ const LandingPage: React.FC = () => {
         logo="https://cdn.builder.io/api/v1/image/assets/TEMP/a580203fede5ad2470b2de709e88a492a7da55d9e9ea3a7f0cb978f1023c0b86?apiKey=42c352afd4764937ae53b030b073a4c4&&apiKey=42c352afd4764937ae53b030b073a4c4"
         menuItems={menuItems}
       />
-      <Landing {...mainContentData} />
+      <Landing />
     </Box>
   );
 };

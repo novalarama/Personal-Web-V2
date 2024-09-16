@@ -16,34 +16,8 @@ interface MainContentProps {
   description: string;
 }
 
-const Landing: React.FC<MainContentProps> = ({ image, title, description }) => {
+export default function Landing() {
   return (
-    // <div className="flex justify-center bg-gray-950">
-    //   <div className="w-full max-w-screen-2xl px-12 py-24 max-md:px-5 max-md:py-12">
-    //     <div className="flex gap-10 max-md:flex-col">
-    //       <div className="flex flex-col w-5/12 max-md:w-full">
-    //         <img
-    //           loading="lazy"
-    //           src={image}
-    //           alt="Designer at work"
-    //           className="w-full h-auto rounded-none max-md:mt-10 max-md:max-w-full"
-    //         />
-    //       </div>
-    //       <div className="flex flex-col justify-center w-7/12 max-md:w-full">
-    //         <div className="flex flex-col text-base text-white">
-    //           <h1 className="text-5xl font-bold leading-snug max-md:text-4xl max-md:leading-tight">
-    //             {title}
-    //           </h1>
-    //           <p className="mt-6 leading-relaxed text-neutral-400 max-md:mt-4">
-    //             {description}
-    //           </p>
-    //           <Button>Find out More →</Button>
-
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
     <ChakraProvider>
       <Box w={{ base: "100%", md: "100%" }} mt={{ base: "30%", lg: "5%" }}>
         <Flex
@@ -51,36 +25,37 @@ const Landing: React.FC<MainContentProps> = ({ image, title, description }) => {
           alignItems="center"
           h="100%"
           flexDir={{ base: "column", md: "row" }}
-          gap="8vw"
         >
-          <VStack>
+          <VStack w="100%" alignItems={{ base: "center", md: "start" }}>
             <Image
+              zIndex="2"
               src="assets/heading-1.png"
               alt="Designer at work"
-              w="28vw"
+              w={{ base: "80%", md: "28vw" }}
               h="auto"
               mt="0"
-              me="-4vw"
+              ms="2vw"
             />
             <Image
+              zIndex="2"
               src="assets/heading-2.png"
               alt="Designer at work"
-              w="16vw"
+              w={{ base: "40%", md: "16vw" }}
               h="auto"
-              ms="-12vw"
-              rounded="none"
-              mt="-12vw"
+              ms={{ base: "-32vw", md: "0vw" }}
+              mt={{ base: "-28vw", md: "-12vw" }}
             />
             <Image
+              zIndex="2"
               src="assets/heading-3.png"
               alt="Designer at work"
-              w="28vw"
+              w={{ base: "80%", md: "28vw" }}
               h="auto"
-              mt="-12vw"
-              me="-4vw"
+              mt={{ base: "-28vw", md: "-12vw" }}
+              ms="2vw"
             />
             <Image
-              zIndex="100"
+              zIndex="1"
               src="assets/vector-2.png"
               alt="Designer at work"
               w="42vw"
@@ -88,7 +63,11 @@ const Landing: React.FC<MainContentProps> = ({ image, title, description }) => {
               ms="-12vw"
             />
           </VStack>
-          <VStack w="50%" alignItems="start" mt="-20vw">
+          <VStack
+            w="100%"
+            alignItems={{ base: "center", md: "start" }}
+            mt={{ base: "-16vw", md: "-28vw" }}
+          >
             <Image
               zIndex="0"
               src="assets/vector-1.png"
@@ -96,16 +75,15 @@ const Landing: React.FC<MainContentProps> = ({ image, title, description }) => {
               w="42vw"
               position="absolute"
               mr="-28vw"
-              // mt="-20vw"
-              // ms="-12vw"
             />
             <Text
               color="#ffffff"
-              lineHeight="5vw"
-              fontSize="5vw"
+              lineHeight={{ base: "9vw", md: "5vw" }}
+              fontSize={{ base: "8vw", md: "5vw" }}
               fontWeight="extrabold"
               top="0"
               zIndex="2"
+              textAlign={{ base: "center", md: "start" }}
             >
               PASSIONATE TO{" "}
               <Box as="span" bgColor="#3C70FF" px="1vw">
@@ -113,7 +91,13 @@ const Landing: React.FC<MainContentProps> = ({ image, title, description }) => {
               </Box>{" "}
               AND BUILD IT
             </Text>
-            <Text color="#A8A8A8" lineHeight="1.2vw" fontSize="1vw" zIndex="2">
+            <Text
+              color="#A8A8A8"
+              lineHeight={{ base: "2vw", md: "1.2vw" }}
+              fontSize={{ base: "2vw", md: "1vw" }}
+              zIndex="2"
+              textAlign={{ base: "center", md: "justify" }}
+            >
               an enthusiastic UI/UX designer and front-end engineer specializing
               in website and mobile design. My passion lies in creating visually
               appealing interfaces that enhance user experiences. With a strong
@@ -125,23 +109,21 @@ const Landing: React.FC<MainContentProps> = ({ image, title, description }) => {
             <Button
               bg="rgba(24, 50, 123, 0.10)"
               border="0.5px solid #18327B"
-              borderRadius="24px"
+              borderRadius={{ base: "4vw", md: "1vw" }}
               boxShadow="0px 4px 26.5px 0px rgba(0, 0, 0, 0.25)"
               backdropFilter="blur(32px)"
               color="#ffffff"
               _hover={{ bg: "#18327B", color: "white" }}
-              py="32px"
-              px="24px"
+              py={{ md: "2vw" }}
+              px={{ base: "6vw", md: "2vw" }}
               zIndex="2"
-              mt="4vw"
+              mt={{ base: "2vw", md: "4vw" }}
             >
-              Get to Know →
+              <Text fontSize={{ base: "2vw", md: "1vw" }}>Get to Know →</Text>
             </Button>
           </VStack>
         </Flex>
       </Box>
     </ChakraProvider>
   );
-};
-
-export default Landing;
+}
