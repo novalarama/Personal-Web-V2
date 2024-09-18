@@ -19,63 +19,26 @@ interface MainContentProps {
 export default function Landing() {
   return (
     <ChakraProvider>
-      <Box w={{ base: "100%", md: "100%" }} mt={{ base: "30%", lg: "5%" }}>
+      <Box
+        w={{ base: "100%", md: "100%" }}
+        mt={{ base: "30%", lg: "5%" }}
+        maxW="100%"
+        px={{ base: "4vw", md: "8vw" }}
+      >
         <Flex
           justifyContent="center"
           alignItems="center"
           h="100%"
           flexDir={{ base: "column", md: "row" }}
         >
-          <VStack w="100%" alignItems={{ base: "center", md: "start" }}>
-            <Image
-              zIndex="2"
-              src="assets/heading-1.png"
-              alt="Designer at work"
-              w={{ base: "80%", md: "28vw" }}
-              h="auto"
-              mt="0"
-              ms="2vw"
-            />
-            <Image
-              zIndex="2"
-              src="assets/heading-2.png"
-              alt="Designer at work"
-              w={{ base: "40%", md: "16vw" }}
-              h="auto"
-              ms={{ base: "-32vw", md: "0vw" }}
-              mt={{ base: "-28vw", md: "-12vw" }}
-            />
-            <Image
-              zIndex="2"
-              src="assets/heading-3.png"
-              alt="Designer at work"
-              w={{ base: "80%", md: "28vw" }}
-              h="auto"
-              mt={{ base: "-28vw", md: "-12vw" }}
-              ms="2vw"
-            />
-            <Image
-              zIndex="1"
-              src="assets/vector-2.png"
-              alt="Designer at work"
-              w="42vw"
-              mt="-20vw"
-              ms="-12vw"
-            />
+          <VStack w="100%" alignItems="center">
+            <Image src="assets/illustration-1.png" alt="" w="80%" mt={{ base: "-24vw", md: "-12vw"}}/>
           </VStack>
           <VStack
             w="100%"
             alignItems={{ base: "center", md: "start" }}
-            mt={{ base: "-16vw", md: "-28vw" }}
+            mt={{ base: "6vw", md: "-12vw" }}
           >
-            <Image
-              zIndex="0"
-              src="assets/vector-1.png"
-              alt="Designer at work"
-              w="42vw"
-              position="absolute"
-              mr="-28vw"
-            />
             <Text
               color="#ffffff"
               lineHeight={{ base: "9vw", md: "5vw" }}
