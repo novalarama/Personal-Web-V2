@@ -21,9 +21,9 @@ export default function Landing() {
     <ChakraProvider>
       <Box
         w={{ base: "100%", md: "100%" }}
-        mt={{ base: "30%", lg: "5%" }}
+        mt={{ base: "30%", lg: "14%" }}
         maxW="100%"
-        px={{ base: "4vw", md: "8vw" }}
+        px={{ base: "4vw", md: "10vw" }}
       >
         <Flex
           justifyContent="center"
@@ -32,7 +32,15 @@ export default function Landing() {
           flexDir={{ base: "column", md: "row" }}
         >
           <VStack w="100%" alignItems="center">
-            <Image src="assets/illustration-1.png" alt="" w="80%" mt={{ base: "-24vw", md: "-12vw"}}/>
+            <Image
+              src="assets/illustration-1.png"
+              alt=""
+              mt={{ base: "-24vw", md: "-12vw" }}
+              w={{ base: "80%", md: "80%" }}
+              h={{ base: "auto", md: "50vw" }}
+              objectFit={{ base: "contain", md: "cover" }}
+              overflow="hidden"
+            />
           </VStack>
           <VStack
             w="100%"
@@ -57,7 +65,7 @@ export default function Landing() {
             <Text
               color="#A8A8A8"
               lineHeight={{ base: "2vw", md: "1.2vw" }}
-              fontSize={{ base: "2vw", md: "1vw" }}
+              fontSize={{ base: "3vw", md: "1vw" }}
               zIndex="2"
               textAlign={{ base: "center", md: "justify" }}
             >
