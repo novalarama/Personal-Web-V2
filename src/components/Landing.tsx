@@ -64,8 +64,8 @@ export default function Landing() {
             </Text>
             <Text
               color="#A8A8A8"
-              lineHeight={{ base: "2vw", md: "1.2vw" }}
-              fontSize={{ base: "3vw", md: "1vw" }}
+              lineHeight={{ base: "5vw", md: "1.8vw" }}
+              fontSize={{ base: "3.5vw", md: "1.1vw" }}
               zIndex="2"
               textAlign={{ base: "center", md: "justify" }}
             >
